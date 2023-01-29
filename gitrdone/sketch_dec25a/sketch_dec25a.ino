@@ -103,10 +103,7 @@ void loop() {
   }
   if (digitalRead(bButton) == LOW) {
     // Serial.write("bButton\n");
-    Keyboard.print("git add !@#$%^&*() ABCDEFGH");
-    Keyboard.write(42);
-    Keyboard.write(KEY_RETURN);
- #if 0
+
     Keyboard.print("git add ");
     delay(100);
     Keyboard.press(KEY_LEFT_SHIFT);
@@ -117,7 +114,6 @@ void loop() {
     Keyboard.press(KEY_RETURN);
     delay(100);
     Keyboard.releaseAll();
- #endif
     delay(100);
   }
   if (digitalRead(cButton) == LOW) {
@@ -146,6 +142,10 @@ void loop() {
   }
   if (digitalRead(eButton) == LOW) {
     // Serial.write("eButton\n");
+        Keyboard.print("git add !@#$%^&*() ABCDEFGH");
+    Keyboard.write(42);
+    Keyboard.write(KEY_RETURN);
+ #if 1
         Keyboard.press(KEY_LEFT_SHIFT);
     Keyboard.print("$('#");
     delay(100);
